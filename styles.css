@@ -1,0 +1,374 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    position: relative;
+}
+
+.toggle-button {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    z-index: 999;
+    transition: transform 0.3s ease;
+}
+
+.toggle-button.active {
+    transform: translateX(250px);
+}
+
+.sidebar {
+    width: 250px;
+    background-color: white;
+    color: black;
+    padding: 0;
+    transition: transform 0.3s ease;
+    z-index: 2;
+}
+
+.sidebar.active {
+    transform: translateX(0);
+}
+
+.logo-container {
+    background-color: black;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.logo {
+    max-width: 200px;
+    height: auto;
+}
+
+.button-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.button-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.button-item:hover {
+    background-color: #2c2c2c;
+    color: white;
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+.chat-section {
+    width: calc(100% - 250px);
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+}
+
+.chat-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.icons-right {
+    display: flex;
+    align-items: center;
+}
+
+.grid-icon {
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.chat-content {
+    height: calc(100% - 60px);
+    overflow-y: scroll;
+    padding: 10px 20px 80px 20px;
+    background-color: #F3F6FC;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.chat-pair {
+    margin-bottom: 60px;
+}
+
+.chat-message {
+    display: flex;
+    align-items: flex-start;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.chat-text {
+    margin-left: 15px;
+    width: 100%;
+}
+
+.chat-prompt {
+    padding: 10px;
+}
+
+.prompt-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.chat-response {
+    background-color: #ffffff;
+    padding: 40px 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.response-dropdown-container {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+}
+
+.dropdown-label {
+    cursor: pointer;
+}
+
+.dropdown-caret {
+    margin-left: 5px;
+    color: #4981DB;
+    font-size: 1.2em;
+}
+
+.dropdown-options {
+    list-style: none;
+    background-color: white;
+    ;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 1;
+}
+
+.dropdown-option {
+    padding: 15px;
+    cursor: pointer;
+}
+
+.dropdown-option:hover {
+    background-color: #ccc;
+}
+
+.hidden {
+    display: none;
+}
+
+.prompt-text {
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.response-text {
+    line-height: 1.5;
+    margin: 10px 10px 20px;
+}
+
+.tags {
+    margin: 40px 0;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.tag-button {
+    font-size: 1em;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #D1DBFA;
+    color: #0A32B3;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tag-button:hover {
+    background-color: #ccc;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    padding-right: 30px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.action-button {
+    padding: 10px 10px;
+    background-color: #fff;
+    color: #114ECC;
+    border: 1px solid #D6D8D7;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: #ccc;
+}
+
+.action-icon {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+#google {
+    color: #000;
+}
+
+.chat-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 35px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #F3F6FC;
+}
+
+.new-chat-button {
+    font-size: 1em;
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background: linear-gradient(90deg, rgba(39, 112, 233, 1) 0%, rgba(26, 73, 239, 1) 100%);
+}
+
+.new-chat-button i {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.chat-text-input {
+    font-size: 1em;
+    flex-grow: 1;
+    padding: 15px;
+    margin: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+}
+
+.submit-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #aeb0b3;
+    font-size: 1.3em;
+}
+
+
+@media (max-width: 760px) {
+    .sidebar {
+        transform: translateX(-250px);
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+
+    .chat-section {
+        width: 100%;
+    }
+
+    .toggle-button {
+        display: block;
+    }
+
+    .actions {
+        padding-right: 10px;
+    }
+
+    .action-buttons {
+        gap: 5px;
+    }
+
+    .action-button {
+        padding: 5px 7px;
+        background-color: #fff;
+        color: #114ECC;
+        border: 1px solid #D6D8D7;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .chat-input {
+        gap: 0px;
+        padding: 10px 10px;
+    }
+
+    .new-chat-button {
+        font-size: 0.8em;
+        padding: 10px;
+    }
+    
+    .new-chat-button i {
+        margin-right: 2px;
+    }
+
+    .chat-text-input {
+        font-size: 0.8em;
+        padding: 10px;
+    }
+
+    .submit-button {
+        font-size: 1em;
+    }
+}

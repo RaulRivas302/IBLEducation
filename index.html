@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chat UI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <button class="toggle-button"><i class="fas fa-bars" id="toggle-icon"></i></button>
+        <div class="sidebar">
+            <div class="logo-container">
+                <a href='/' class="logo-link"><img class="logo" src="./assets/logo.png" alt="Logo"></a>
+            </div>
+            <ul class="button-list">
+                <li class="button-item"><i class="fas fa-sync-alt icon"></i>Reset chat</li>
+                <li class="button-item"><i class="fas fa-chart-line icon"></i>Bard Activity</li>
+                <li class="button-item"><i class="fas fa-question-circle icon"></i>FAQ</li>
+                <li class="button-item"><i class="fas fa-exclamation-circle icon"></i>Updates</li>
+                <li class="button-item"><i class="fas fa-info-circle icon"></i>Help</li>
+            </ul>
+
+        </div>
+
+        <div class="chat-section">
+            <div class="chat-header">
+                <div class="icons-right">
+                    <i class="fas fa-th grid-icon"></i>
+                    <a href='/'><img src="./assets/avatar2.jpg" alt="avatar" class="avatar"></a>
+                </div>
+            </div>
+            <div class="chat-content">
+                <div class="chat-pair">
+                    <div class="chat-prompt chat-message">
+                        <div class="prompt-avatar">
+                            <img src="./assets/avatar2.jpg" alt="User Avatar">
+                        </div>
+                        <p class="prompt-text chat-text bold">
+                            What's the weather like?
+                        </p>
+                    </div>
+                    <div class="chat-response">
+                        <div class="response-dropdown-container">
+                            <div class="dropdown-label">
+                                <span class="bold">View other drafts</span>
+                                <i class="fas fa-caret-down dropdown-caret"></i>
+                            </div>
+                        </div>
+                        <div class="chat-message">
+                            <div class="prompt-avatar">
+                                <img src="./assets/robot.jpg" alt="User Avatar">
+                            </div>
+                            <div class="chat-text">
+                                <p class="response-text">
+                                    I can't access real-time data, but generally speaking, the weather can vary greatly
+                                    depending on your location.
+                                </p>
+                                <div class="tags">
+                                    <span class="bold">Learn more:</span>
+                                    <button class="tag-button bold">1. smallcase.com</button>
+                                    <button class="tag-button bold">2. cnn.com</button>
+                                    <button class="tag-button bold">3. marketbeat.com</button>
+                                    <button class="tag-button bold">+2 more</button>
+                                </div>
+                                <div class="actions">
+                                    <div class="action-buttons">
+                                        <button class="action-button"><i class="fas fa-thumbs-up"></i></button>
+                                        <button class="action-button"><i class="fas fa-thumbs-down"></i></button>
+                                        <button class="action-button"><i class="fas fa-file-import"></i></button>
+                                        <button class="action-button" id="google"><i class="fab fa-google"></i> Google
+                                            it</button>
+                                    </div>
+
+                                    <div class="action-icon">
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-pair">
+                    <div class="chat-prompt chat-message">
+                        <div class="prompt-avatar">
+                            <img src="./assets/avatar2.jpg" alt="User Avatar">
+                        </div>
+                        <p class="prompt-text chat-text">
+                            Why is climate change such a controversial topic among politicians?
+                        </p>
+                    </div>
+                    <div class="chat-response">
+                        <div class="response-dropdown-container">
+                            <div class="dropdown-label">
+                                <span class="bold">View other drafts</span>
+                                <i class="fas fa-caret-down dropdown-caret"></i>
+                            </div>
+                        </div>
+                        <div class="chat-message">
+                            <div class="prompt-avatar">
+                                <img src="./assets/robot.jpg" alt="User Avatar">
+                            </div>
+                            <div class="chat-text">
+                                <p class="response-text">
+                                    Climate change can be a divisive issue due to a range of factors including economic
+                                    interests, ideological beliefs, and regional concerns.
+                                </p>
+                                <p class="response-text">
+                                    Industries like fossil fuels may resist changes that could affect their profits,
+                                    while some politicians may downplay or deny the science due to their own beliefs or
+                                    the interests of their constituents.
+                                </p>
+                                <div class="tags">
+                                    <span class="bold">Learn more:</span>
+                                    <button class="tag-button bold">1. smallcase.com</button>
+                                    <button class="tag-button bold">2. cnn.com</button>
+                                    <button class="tag-button bold">+2 more</button>
+                                </div>
+                                <div class="actions">
+                                    <div class="action-buttons">
+                                        <button class="action-button"><i class="fas fa-thumbs-up"></i></button>
+                                        <button class="action-button"><i class="fas fa-thumbs-down"></i></button>
+                                        <button class="action-button"><i class="fas fa-file-import"></i></button>
+                                        <button class="action-button" id="google"><i class="fab fa-google"></i> Google
+                                            it</button>
+                                    </div>
+
+                                    <div class="action-icon">
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-pair">
+                    <div class="chat-prompt chat-message">
+                        <div class="prompt-avatar">
+                            <img src="./assets/avatar2.jpg" alt="User Avatar">
+                        </div>
+                        <p class="prompt-text chat-text">
+                            Could you summarize the main events in 'Romeo and Juliet'?
+                        </p>
+                    </div>
+                    <div class="chat-response">
+                        <div class="response-dropdown-container">
+                            <div class="dropdown-label">
+                                <span class="bold">View other drafts</span>
+                                <i class="fas fa-caret-down dropdown-caret"></i>
+                            </div>
+                        </div>
+                        <div class="chat-message">
+                            <div class="prompt-avatar">
+                                <img src="./assets/robot.jpg" alt="User Avatar">
+                            </div>
+                            <div class="chat-text">
+                                <p class="response-text">
+                                    In 'Romeo and Juliet', two young lovers from feuding families in Verona fall in love. Despite their families' objections and various complications, they secretly marry. Unfortunately, a series of tragic events lead to both of their deaths, ultimately reconciling their families.
+                                </p>
+                                <div class="tags">
+                                    <span class="bold">Learn more:</span>
+                                    <button class="tag-button bold">1. smallcase.com</button>
+                                    <button class="tag-button bold">2. cnn.com</button>
+                                </div>
+                                <div class="actions">
+                                    <div class="action-buttons">
+                                        <button class="action-button"><i class="fas fa-thumbs-up"></i></button>
+                                        <button class="action-button"><i class="fas fa-thumbs-down"></i></button>
+                                        <button class="action-button"><i class="fas fa-file-import"></i></button>
+                                        <button class="action-button" id="google"><i class="fab fa-google"></i> Google
+                                            it</button>
+                                    </div>
+
+                                    <div class="action-icon">
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <button class="new-chat-button"><i class="fas fa-broom"></i> New topic</button>
+                    <input type="text" class="chat-text-input" placeholder="Enter a prompt here">
+                    <button class="submit-button"><i class="fas fa-paper-plane"></i></button>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+</body>
+
+</html>
